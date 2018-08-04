@@ -7,13 +7,17 @@ import { CounterContainerComponent } from './containers/counter.container';
 import { CounterComponent } from './components/counter/counter.component';
 import { counterReducer } from './reducers/counter.reducer';
 import { CounterControlsComponent } from './components/counter-controls/counter-controls.component';
+import { CounterLinkControlsComponent } from './components/counter-link-controls/counter-link-controls.component';
+import { CounterDisplayComponent } from './components/counter-display/counter-display.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CounterContainerComponent,
     CounterComponent,
-    CounterControlsComponent
+    CounterControlsComponent,
+    CounterLinkControlsComponent,
+    CounterDisplayComponent
   ],
   imports: [
     BrowserModule,

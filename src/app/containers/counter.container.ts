@@ -1,32 +1,37 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import * as counterActions from '../actions/counter.actions';
 import { AppState } from '../app.state';
 
 @Component({
-    selector: 'counter-container',
+    selector: 'app-counter-container',
+    changeDetection: ChangeDetectionStrategy.OnPush,
     template: `
         <app-counter-controls [count]="count$ | async"
             (increment)="increment($event)"
             (decrement)="decrement($event)"
             (reset)="reset()"></app-counter-controls>
+        <app-counter-link-controls [count]="count$ | async"
+            (increment)="increment($event)"
+            (decrement)="decrement($event)"
+            (reset)="reset()"></app-counter-link-controls>
         <app-counter [count]="count$ | async"
             [up]="up$ | async"
             [down]="down$ | async"
             [initial]="initial$ | async"></app-counter>
-        <app-counter [count]="count$ | async"
+        <app-counter-display [count]="count$ | async"
             [up]="up$ | async"
             [down]="down$ | async"
-            [initial]="initial$ | async"></app-counter>
+            [initial]="initial$ | async"></app-counter-display>
          <app-counter [count]="count$ | async"
             [up]="up$ | async"
             [down]="down$ | async"
             [initial]="initial$ | async"></app-counter>
-        <app-counter [count]="count$ | async"
+        <app-counter-display [count]="count$ | async"
             [up]="up$ | async"
             [down]="down$ | async"
-            [initial]="initial$ | async"></app-counter>
+            [initial]="initial$ | async"></app-counter-display>
     `
 })
 export class CounterContainerComponent {

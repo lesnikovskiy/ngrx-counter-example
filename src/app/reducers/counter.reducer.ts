@@ -21,6 +21,7 @@ export function counterReducer(state = initialState, action: counterActions.Coun
             return Object.assign({}, state, {
                 count: action.payload + 1,
                 up: true,
+                down: false,
                 initial: false
             });
         case counterActions.DECREMENT:
