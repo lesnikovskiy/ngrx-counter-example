@@ -1,6 +1,5 @@
 import { Action } from '@ngrx/store';
 import * as counterActions from '../actions/counter.actions';
-import { InitialState } from '../../../node_modules/@ngrx/store/src/models';
 
 export interface CounterState {
     count: number;
