@@ -1,0 +1,17 @@
+.counter-view {
+    font-size: 36px;
+    width: 205px;
+    text-align: center;
+}
+
+.up {
+    color: green
+}
+
+.down {
+    color: blue;
+}
+
+.initial {
+    color: black;
+}
